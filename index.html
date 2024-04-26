@@ -4,28 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meal Search</title>
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Additional CSS styles */
-        .card {
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .instructions {
-            font-size: 14px;
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="#">Meal Search</a>
+                <a class="navbar-brand" href="#">
+                    <img src="mealdblogo.jpg" alt="Meal Search Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recipes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -45,15 +53,44 @@
             </div>
         </div>
         <div id="mealResults" class="row mt-5"></div>
-        <div id="showAllBtn" class="row justify-content-center mt-3" style="display: none;">
+        <div id="showAllBtn" class="row justify-content-center mt-3 mb-5" style="display: none;">
             <button class="btn btn-secondary">Show All</button>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 bg-dark text-white">
-        <div class="container text-center">
-            <span class="text-muted">© 2024 Meal Search</span>
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Meal Search</h5>
+                    <p>Explore delicious recipes and find inspiration for your next meal!</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Recipes</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <address>
+                        123 Main Street<br>
+                        City, State 12345<br>
+                        Email: info@mealsearch.com<br>
+                        Phone: 555-123-4567
+                    </address>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2024 Meal Search. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
 

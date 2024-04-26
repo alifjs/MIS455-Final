@@ -18,6 +18,12 @@ function displayResults(meals,showAll) {
     mealResults.innerHTML = '';
     if (meals && !showAll) {
         meals.slice(0, 5).forEach(meal => {
+            const ingredients = [];
+            for (let i = 1; i <= 20; i++) {
+                if (meal[`strIngredient${i}`]) {
+                    ingredients.push(`${meal[`strMeasure${i}`]} ${meal[`strIngredient${i}`]}`);
+                }
+            }
             const mealCard = `
             <div class="col-md-4 mb-4">
                 <div class="card">
@@ -26,7 +32,9 @@ function displayResults(meals,showAll) {
                         <h5 class="card-title">Meal ID: ${meal.idMeal}</h5>
                         <h5 class="card-title">Meal Name: ${meal.strMeal}</h5>
                         <h5 class="card-title">Category: ${meal.strCategory}</h5>
-                        <h5 class="card-title">Instructions:</h5>
+                        <h5 class="card-title">Ingredients:</h5>
+                        <p class='instructions'>${ingredients.join(', ')}</p>
+                        <h5 class="card-title">Cooking instructions:</h5>
                         <p class='instructions'>${meal.strInstructions}</p>
                     </div>
                 </div>
@@ -39,6 +47,12 @@ function displayResults(meals,showAll) {
         }
     }else if  (meals && showAll) {
         meals.forEach(meal => {
+            const ingredients = [];
+            for (let i = 1; i <= 20; i++) {
+                if (meal[`strIngredient${i}`]) {
+                    ingredients.push(`${meal[`strMeasure${i}`]} ${meal[`strIngredient${i}`]}`);
+                }
+            }
             const mealCard = `
             <div class="col-md-4 mb-4">
                 <div class="card">
@@ -47,7 +61,9 @@ function displayResults(meals,showAll) {
                         <h5 class="card-title">Meal ID: ${meal.idMeal}</h5>
                         <h5 class="card-title">Meal Name: ${meal.strMeal}</h5>
                         <h5 class="card-title">Category: ${meal.strCategory}</h5>
-                        <h5 class="card-title">Instructions:</h5>
+                        <h5 class="card-title">Ingredients:</h5>
+                        <p class='instructions'>${ingredients.join(', ')}</p>
+                        <h5 class="card-title">Cooking instructions:</h5>
                         <p class='instructions'>${meal.strInstructions}</p>
                     </div>
                 </div>

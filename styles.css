@@ -1,3 +1,13 @@
-.instructions{
-    font-size: 15px;
+.card {
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.instructions {
+    font-size: 14px;
+}
+.footer {
+    background-color: #343a40;
+    color: #fff;
 }
