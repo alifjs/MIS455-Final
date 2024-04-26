@@ -7,6 +7,18 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS styles */
+        .card {
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .instructions {
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -23,16 +35,16 @@
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <form id="searchForm">
-                    <div class="input-group mb-3">
-                        <input type="text" id="searchInput" class="form-control" placeholder="Search for a meal...">
+                    <div class="input-group">
+                        <input type="text" id="searchInput" class="form-control form-control-sm" placeholder="Search for a meal...">
                         <div class="input-group-append">
-                            <button class="btn btn-primary" type="submit">Search</button>
+                            <button class="btn btn-primary btn-sm" type="submit">Search</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
-        <div id="mealResults" class="row"></div>
+        <div id="mealResults" class="row mt-5"></div>
         <div id="showAllBtn" class="row justify-content-center mt-3" style="display: none;">
             <button class="btn btn-secondary">Show All</button>
         </div>
@@ -52,4 +64,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 

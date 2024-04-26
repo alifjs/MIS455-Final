@@ -26,7 +26,8 @@ function displayResults(meals,showAll) {
                         <h5 class="card-title">Meal ID: ${meal.idMeal}</h5>
                         <h5 class="card-title">Meal Name: ${meal.strMeal}</h5>
                         <h5 class="card-title">Category: ${meal.strCategory}</h5>
-                        <h5 class="card-title">Instructions: ${meal.strInstructions}</h5>
+                        <h5 class="card-title">Instructions:</h5>
+                        <p class='instructions'>${meal.strInstructions}</p>
                     </div>
                 </div>
             </div>
@@ -46,7 +47,8 @@ function displayResults(meals,showAll) {
                         <h5 class="card-title">Meal ID: ${meal.idMeal}</h5>
                         <h5 class="card-title">Meal Name: ${meal.strMeal}</h5>
                         <h5 class="card-title">Category: ${meal.strCategory}</h5>
-                        <h5 class="card-title">Instructions: ${meal.strInstructions}</h5>
+                        <h5 class="card-title">Instructions:</h5>
+                        <p class='instructions'>${meal.strInstructions}</p>
                     </div>
                 </div>
             </div>
